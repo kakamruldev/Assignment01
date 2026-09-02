@@ -55,3 +55,39 @@ console.log(getDayType("Friday"));
 console.log(getDayType("friday"));
 console.log(getDayType("MONDAY"));
 console.log(getDayType("Bandarban"));
+
+
+
+
+// ============== Question: 03 =============
+
+
+function validateUsername(username) {
+
+    // Rule 1: Check the length
+    if (username.length < 4) {
+        return "Too Short";
+    }
+
+    // Rule 2: Check for the word "admin"
+    if (username.toLowerCase().includes("admin")) {
+        return "Reserved Word";
+    }
+
+    // Rule 3: Check for a space
+    if (username.includes(" ")) {
+        return "No Space Allowed";
+    }
+
+    // Rule 4: Everything else
+    return "Available";
+}
+
+// Test the function
+console.log(validateUsername("rahim123"));
+console.log(validateUsername("ab"));
+console.log(validateUsername("a b"));
+console.log(validateUsername("abcd"));
+console.log(validateUsername("rahim islam"));
+console.log(validateUsername("superadmin99"));
+console.log(validateUsername("Admin Rahim"));
